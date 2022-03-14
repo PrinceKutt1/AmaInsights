@@ -1,0 +1,23 @@
+{
+  "name": "amainsights",
+  "version": "1.0.0",
+  "description": "Prince Wells Kutorglo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrinceKutt1/AmaInsights.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrinceKutt1/AmaInsights/issues"
+  },
+  "homepage": "https://github.com/PrinceKutt1/AmaInsights#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
