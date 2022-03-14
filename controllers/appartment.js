@@ -2,7 +2,9 @@ const getAllAppartments = (req,res)=>{
     res.send('List of all the appartments')
 }
 
-
+const addAppartment =(req,res)=>{
+    res.send('Get an Appartment')
+}
 
 const getAppartment =(req,res)=>{
     res.send('Get single Appartment')
@@ -26,5 +28,6 @@ module.exports ={
     getAllAppartments,
     getAppartment,
     deleteAppartment,
-    updateAppartment
+    updateAppartment,
+    addAppartment
 }
