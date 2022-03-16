@@ -1,9 +1,13 @@
 const express = require('express');
 const appartmentRoute = require('./routes/appartment')
+require('./db/connect');
+require('dotenv').config()
+
+const contactRoute = require('./routes/contact')
 const path = require('path');
 const app = express()
 
-//middleware to allow forjson data.
+//middleware to allow retrival of data from req.body etc.
 app.use(express.json());
 
 
@@ -14,26 +18,32 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/v1/appartment', appartmentRoute)
-
-
-
-
-
-/*app.get('*', (req, res)=> {
-    const index = path.join(__dirname, '/', '/client', 'index.html');
-    res.sendFile(index);
-  });*/
-
-
-
-
+app.use('/api/v1/contact', contactRoute)
 
 const PORT = process.env.PORT || 3000;
-
-
-
 
 app.listen(PORT, ()=>{
     
     console.log(`App is running on port:  ${PORT}`)
 });
+
+
+/*
+const startServer = async ()=>{
+  try{
+
+    //start server if db connection is successful
+    await connectDB(process.env.MONGO_URI)
+    app.listen(PORT, ()=>{
+    
+      console.log(`App is running on port:  ${PORT}`)})
+
+  }catch(err){
+    console.log(err)
+
+  }
+} 
+
+
+startServer()
+*/

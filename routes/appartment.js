@@ -17,3 +17,4 @@ appartmentRouter.delete('/:id', deleteAppartment)
 module.exports = appartmentRouter;
 
 
+    
