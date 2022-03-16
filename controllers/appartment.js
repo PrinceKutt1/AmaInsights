@@ -1,25 +1,31 @@
-/*const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const Appartment = require('../models/appartment')
 
 
 const getAppartment = async (req,res) =>{
     try{
-      const {id: contactID} = req.params
-      const contact = await Contact.findOne({_id:contactID})
+      const {id: appartmentID} = req.params
+      const appartment = await Appartment.findOne({_id:appartmentID})
+
+      //for incorrect ID
+      if(!appartment){
+          return res.status(404).json({msg: `No contact with ${appartmentID}`})
+        }
+ res.status(200).json({appartment})
     }
     catch(error){
 
+        res.status(500).json({message : error})
     }
 }
-
 
 
 const addAppartment = async (req,res)=>{
     try{
         
-        const contact = await Contact.create(req.body)
+        const appartment = await Appartment.create(req.body)
 
-    res.status(201).json({contact})
+    res.status(201).json({appartment})
 }catch(err){
     res.status(500).json({message : err})
 }
@@ -28,36 +34,57 @@ const addAppartment = async (req,res)=>{
 
 
 
-const getallAppartment = async (req, res)=>{
+const getAllAppartments = async (req, res)=>{
     try{
-        //store all documents in Contact to contacts 
-      const contacts = await Contact.find({})
-      res.status(200).json({contacts})
+        //store all documents in Appartment to appartments 
+      const appartments = await Appartment.find({})
+      res.status(200).json({appartments})
     }
     catch(error){
-        res.status(500).json({message : err})
+        res.status(500).json({message : error})
 
     }
 }
 
 
 
-
-module.exports = {addAppartment, getallAppartment,getAppartment};
-
-
-const updateAppartment =(req,res)=>{
-    res.send('Get an Appartment')
+const updateAppartment = async (req,res)=>{
+    try{
+        const {id: appartmentID} = req.params
+        const appartment = await Appartment.findByIdAndUpdate({_id:appartmentID}, req.body, {
+            new:true,
+            runValidators:true
+        });
+        if(!appartment){
+            return res.status(404).json({msg: `No contact with ${appartmentID}`})
+        }
+        res.status(200).json({appartment})
+    }
+    catch(error){
+        res.status(400).json({msg:error})
+    }
 }
 
 
 
 
-const deleteAppartment =(req,res)=>{
-    res.send('Get an Appartment')
+const deleteAppartment = async (req,res)=>{
+    try{
+
+      const {id: appartmentID} = req.params
+      const appartment = await Contact.findOneAndDelete({_id:appartmentID})
+      //for incorrect ID
+      if(!appartment){
+        return res.status(404).json({msg: `No contact with ${appartmentID}`})
+      }
+      res.status(200).json({appartment})
+
+    }
+    catch(error){
+        res.status(400).json({msg:error})
+
+    }
 }
-
-
 
 module.exports ={
     getAllAppartments,
@@ -66,4 +93,3 @@ module.exports ={
     updateAppartment,
     addAppartment
 }
-*/

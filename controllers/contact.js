@@ -6,9 +6,16 @@ const getContact = async (req,res) =>{
     try{
       const {id: contactID} = req.params
       const contact = await Contact.findOne({_id:contactID})
+
+      //for incorrect ID
+      if(!contact){
+          return res.status(404).json({msg: `No contact with ${contactID}`})
+        }
+ res.status(200).json({contact })
     }
     catch(error){
 
+        res.status(500).json({message : error})
     }
 }
 
@@ -35,12 +42,48 @@ const getallContact = async (req, res)=>{
       res.status(200).json({contacts})
     }
     catch(error){
-        res.status(500).json({message : err})
+        res.status(500).json({message : error})
 
     }
 }
 
 
 
+const deleteContact = async (req,res)=>{
+    try{
 
-module.exports = {addContact, getallContact,getContact};
+      const {id: contactID} = req.params
+      const contact = await Contact.findOneAndDelete({_id:contactID})
+      //for incorrect ID
+      if(!contact){
+        return res.status(404).json({msg: `No contact with ${contactID}`})
+      }
+      res.status(200).json({contact})
+
+    }
+    catch(error){
+        res.status(400).json({msg:error})
+
+    }
+}
+
+const updateContact = async (req,res)=>{
+    try{
+        const {id: contactID} = req.params
+        const contact = await Contact.findByIdAndUpdate({_id:contactID}, req.body, {
+            new:true,
+            runValidators:true
+        });
+        if(!contact){
+            return res.status(404).json({msg: `No contact with ${contactID}`})
+        }
+        res.status(200).json({contact})
+    }
+    catch(error){
+        res.status(400).json({msg:error})
+    }
+}
+
+
+
+module.exports = {addContact, getallContact,getContact, deleteContact, updateContact};
