@@ -1,3 +1,4 @@
+const { error } = require('console');
 const mongoose = require('mongoose');
 const Contact = require('../models/contact')
 
@@ -28,7 +29,7 @@ const addContact = async (req,res)=>{
 
     res.status(201).json({contact})
 }catch(err){
-    res.status(500).json({message : err})
+    res.status(500).json({msg:err})
 }
     }
     
