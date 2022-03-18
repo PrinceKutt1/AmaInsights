@@ -1,5 +1,5 @@
 # AmaInsight project
-Simple Node/Express API to serve a landing page in oder to track user activities using Google Analytics. The API allows Users to create, read, update, and delete Contact as well as create Appartments for each individual. All data is persisted in a database using MongoDB
+Simple Node/Express API to serve a landing page in oder to track user activities using Google Analytics. The API allows Users to create, read, update, and delete Contact as well as Appartments for each individual. All data is persisted in a database using MongoDB
 
 ## Running the app
 To run locally, run npm install, then npm start
