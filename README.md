@@ -17,13 +17,12 @@ To test with Swagger:
 
 -Retrieve a single contact using GET /api/v1/contact/{id}
 
--Create an contact using POST /api/v1/contact
+-Create a contact using POST /api/v1/contact
 
--Update an contact using PUT /api/v1/contact/{id}
+-Update a contact using PUT /api/v1/contact/{id}
 
--Delete an contact using DELETE /api/v1/contact/{id}
+-Delete a contact using DELETE /api/v1/contact/{id}
 
--Create an contact  using POST /api/v1/contact/{id}
 
 ### Appartment:
 ----
@@ -31,9 +30,11 @@ To test with Swagger:
 
 -Retrieve a single appartment using GET /api/v1/appartments/{id}
 
--Update a appartments using PUT /api/v1/appartments/{id}
+-Update an appartment using PUT /api/v1/appartments/{id}
 
--Delete an appartments using DELETE /api/v1/appartment/{id}
+-Delete an appartment using DELETE /api/v1/appartment/{id}
+
+-Create an appartment using POST /api/v1/appartment/{id}
 
 
 [The project is deployed on Heroku. Find the link here](https://amainsight.herokuapp.com/)
