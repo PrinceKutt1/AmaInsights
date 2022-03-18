@@ -27,7 +27,7 @@ const addContact = async (req,res)=>{
         
         const contact = await Contact.create(req.body)
 
-    res.status(201).json({contact})
+    res.status(200).json({contact})
 }catch(err){
     res.status(500).json({msg:err})
 }
@@ -63,7 +63,7 @@ const deleteContact = async (req,res)=>{
 
     }
     catch(error){
-        res.status(400).json({msg:error})
+        res.status(500).json({msg:error})
 
     }
 }
@@ -81,7 +81,7 @@ const updateContact = async (req,res)=>{
         res.status(200).json({contact})
     }
     catch(error){
-        res.status(400).json({msg:error})
+        res.status(500).json({msg:error})
     }
 }
 

@@ -25,7 +25,7 @@ const addAppartment = async (req,res)=>{
         
         const appartment = await Appartment.create(req.body)
 
-    res.status(201).json({appartment})
+    res.status(200).json({appartment})
 }catch(err){
     res.status(500).json({message : err})
 }
@@ -61,7 +61,7 @@ const updateAppartment = async (req,res)=>{
         res.status(200).json({appartment})
     }
     catch(error){
-        res.status(400).json({msg:error})
+        res.status(500).json({msg:error})
     }
 }
 
@@ -81,7 +81,7 @@ const deleteAppartment = async (req,res)=>{
 
     }
     catch(error){
-        res.status(400).json({msg:error})
+        res.status(500).json({msg:error})
 
     }
 }
