@@ -3,8 +3,8 @@ const appartmentRoute = require('./routes/appartment')
 require('./db/connect');
 require('dotenv').config()
 
-const swaggerJsDoc = require("swagger-jsdoc");
-const swaggerUi = require("swagger-ui-express");
+const swaggerJsDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
 
 const contactRoute = require('./routes/contact')
 const path = require('path');
@@ -42,7 +42,7 @@ const swaggerOptions = {
   
   apis: ["index.js"]
 };
-
+//const swaggerDocs= require('./swagger.json')
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 //using swaggerUi to serve the documentation
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
