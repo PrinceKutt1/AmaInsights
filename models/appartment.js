@@ -11,7 +11,7 @@ const appartmentSchema = new mongoose.Schema({
     },
     description:{
         type: String,
-        required: [true, 'Description address is required']
+        required: [true, 'Description of room type is required']
 
 
     },
