@@ -6,6 +6,11 @@ To run locally, run npm install, then npm start
 
 Once the app is running locally, you can access the API at http://localhost:3000/
 
+
+## Testing the app
+Tests for endpoints have been written with #Mocha and #chai. 
+To run the test, run ```npm test```
+
 ## Testing with Swagger
 Swagger documentation and testing available at http://localhost:3000/api/v1/api-docs
 
