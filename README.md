@@ -42,4 +42,4 @@ To test with Swagger:
 -Create an appartment using POST /api/v1/appartment/{id}
 
 
-[The project is deployed on Heroku. Find the link here](https://amainsight.herokuapp.com/)
+[The project is deployed on Heroku. Click on link for live project](https://amainsight.herokuapp.com/)
