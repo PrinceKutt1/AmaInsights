@@ -1,4 +1,3 @@
-const { error } = require('console');
 const mongoose = require('mongoose');
 const Contact = require('../models/contact')
 

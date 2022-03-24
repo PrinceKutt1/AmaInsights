@@ -23,7 +23,7 @@ describe('Appartments', () => {
   */
   describe('/GET appartment', () => {
 	  it('it should GET all the appartments', (done) => {
-			chai.request(server)
+			chai.request(index)
 		    .get('/api/v1/appartment')
 		    .end((err, res) => {
 			  	res.should.have.status(200);
