@@ -18,7 +18,21 @@ describe('Contacts', () => {
 		});		
 	})
 
-
+/*
+  * Test the /GET route
+  */
+describe('/GET appartment', () => {
+    it('it should GET all the appartments', (done) => {
+          chai.request(server)
+          .get('/api/v1/appartment')
+          .end((err, res) => {
+                res.should.have.status(200);
+                res.body.should.be.a('array');
+                res.body.length.should.be.eql(0);
+            done();
+          });
+    });
+});
 
 
 
