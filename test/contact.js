@@ -7,3 +7,6 @@ const chaiHttp = require('chai-http');
 const index = require('../index');
 const appartment = require("../models/contact");
 const should = chai.should();
+
+
+chai.use(chaiHttp);
