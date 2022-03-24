@@ -5,7 +5,6 @@ process.env.NODE_ENV = 'MONGO_URI';
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const index = require('../index');
-const appartment = require("../models/appartment");
 const should = chai.should();
 
 

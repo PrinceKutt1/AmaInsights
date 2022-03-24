@@ -26,7 +26,7 @@ const addContact = async (req,res)=>{
         
         const contact = await Contact.create(req.body)
 
-    res.status(200).json({contact})
+    res.status(200).json({msg:"Contact successfully added!", contact})
 }catch(err){
     res.status(500).json({msg:err})
 }

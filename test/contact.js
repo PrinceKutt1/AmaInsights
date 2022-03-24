@@ -51,7 +51,7 @@ describe('/POST contact', () => {
                 res.body.should.be.a('object');
                 res.body.should.have.property('errors');
                 res.body.errors.should.have.property('description');
-                res.body.errors.description.should.have.property('kind').eql('!required');
+                res.body.errors.description.should.have.property('kind').eql('required');
             done();
           });
     });
@@ -71,6 +71,42 @@ describe('/POST contact', () => {
             done();
           });
     });
+
+
+/*
+  * Test the /GET/:id route
+  
+*/
+describe('/GET/:id contact', () => {
+    it('it should GET a contact by the given id', (done) => {
+        let contact = new Contact({ email: "prince@gmail.com"
+          });
+        contact.save((err, contact) => {
+            chai.request(index)
+          .get('/api/v1/contact/' + contact.id)
+          .send(contact)
+          .end((err, res) => {
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                res.body.should.have.property('email');
+                res.body.should.have.property('_id').eql(contact.id);
+            done();
+          });
+        });
+          
+    });
+});
+/*
+* Test the /PUT/:id route
+*/
+
+
+
+
+
+
+
+
 });
 
 
