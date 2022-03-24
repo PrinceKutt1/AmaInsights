@@ -21,7 +21,7 @@ describe('Contacts', () => {
 /*
   * Test the /GET route
   */
-describe('/GET contact', () => {
+describe('/GET contacts', () => {
     it('it should GET all the contacts', (done) => {
           chai.request(index)
           .get('/api/v1/contact')
@@ -120,23 +120,23 @@ describe('/PUT/:id contact', () => {
 * Test the /DELETE/:id route
 */
 
-
-
-
-
-
-
-
+describe('/DELETE/:id contact', () => {
+    it('it should DELETE a contact given the id', (done) => {
+        let contact = new Contact({email: "prince@gmail.com"})
+        contact.save((err, contact) => {
+              chai.request(index)
+              .delete('/api/v1/contact/' + contact.id)
+              .end((err, res) => {
+                    res.should.have.status(200);
+                    res.body.should.be.a('object');
+                    res.body.should.have.property('message').eql('Contact successfully deleted!');
+                    res.body.result.should.have.property('ok').eql(1);
+                    res.body.result.should.have.property('n').eql(1);
+                done();
+              });
+        });
+    });
 });
 
-
-
-
-
-
-
-
-
-
-
+});
 });
