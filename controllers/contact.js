@@ -58,7 +58,7 @@ const deleteContact = async (req,res)=>{
       if(!contact){
         return res.status(404).json({msg: `No contact with ${contactID}`})
       }
-      res.status(200).json({contact})
+      res.status(200).json({msg: 'Contact successfully deleted!', contact})
 
     }
     catch(error){
@@ -77,7 +77,7 @@ const updateContact = async (req,res)=>{
         if(!contact){
             return res.status(404).json({msg: `No contact with ${contactID}`})
         }
-        res.status(200).json({contact})
+        res.status(200).json({msg: 'Contact successfully Updated!', contact})
     }
     catch(error){
         res.status(500).json({msg:error})
