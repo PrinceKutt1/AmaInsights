@@ -10,3 +10,25 @@ const should = chai.should();
 
 
 chai.use(chaiHttp);
+
+//parent block
+describe('Appartments', () => {
+	beforeEach((done) => { //Before each test we empty the database
+		Appartment.remove({}, (err) => { 
+		   done();		   
+		});		
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+    
+});
