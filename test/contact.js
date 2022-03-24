@@ -100,6 +100,26 @@ describe('/GET/:id contact', () => {
 * Test the /PUT/:id route
 */
 
+describe('/PUT/:id contact', () => {
+    it('it should UPDATE a contact given the id', (done) => {
+        let contact = new Contact({email: "prince@gmail.com"})
+        contact.save((err, contact) => {
+              chai.request(index)
+              .put('/api/v1/contact/' + contact.id)
+              .send({email: "prince@gmail.com"})
+              .end((err, res) => {
+                    res.should.have.status(200);
+                    res.body.should.be.a('object');
+                    res.body.should.have.property('message').eql('Contact  updated!');
+                done();
+              });
+        });
+    });
+});
+/*
+* Test the /DELETE/:id route
+*/
+
 
 
 
