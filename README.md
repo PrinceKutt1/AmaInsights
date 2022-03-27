@@ -39,7 +39,7 @@ To test with Swagger:
 
 -Delete an appartment using DELETE /api/v1/appartment/{id}
 
--Create an appartment using POST /api/v1/appartment/{id}
+-Create an appartment using POST /api/v1/appartment
 
 
 [The project is deployed on Heroku. Click on link for live project](https://amainsight.herokuapp.com/)
