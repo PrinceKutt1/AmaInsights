@@ -1,8 +1,8 @@
 # AmaInsight project
-Simple Node/Express API to serve a landing page in oder to track user activities using Google Analytics. The API allows Users to create, read, update, and delete Contact as well as Appartments for each individual. All data is persisted in a database using MongoDB
+AmaInsight project is a Simple Node/Express API to serve a landing page of a Resort Website in order to track user activities using Google Analytics. The API allows Users to create, read, update, and delete Contact as well as Appartments for each individual. All data is persisted in a database using MongoDBB. 
 
 ## Running the app
-To run locally, run npm install, then npm start
+To run locally, run npm install, then ```node index```
 
 Once the app is running locally, you can access the API at http://localhost:3000/
 
