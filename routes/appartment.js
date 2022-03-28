@@ -158,7 +158,7 @@ appartmentRouter.post('/', addAppartment)
 
 
 
-appartmentRouter.get('/', getAllAppartments)
+appartmentRouter.delete('/:id', deleteAppartment)
 
 module.exports = appartmentRouter;
 

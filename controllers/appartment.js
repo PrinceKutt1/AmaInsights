@@ -4,6 +4,7 @@ const Appartment = require('../models/appartment')
 
 const getAppartment = async (req,res) =>{
     try{
+        //destructuring req.params
       const {id: appartmentID} = req.params
       const appartment = await Appartment.findOne({_id:appartmentID})
 
