@@ -5,7 +5,7 @@ process.env.NODE_ENV = 'MONGO_URI';
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const index = require('../index');
-const should = chai.should();
+const should = Chai.Should();
 
 
 chai.use(chaiHttp);
