@@ -1,11 +1,16 @@
-![The Wells Resort](./client/Images/readmeImag.jpeg)
-![Our Activities](readmeImg.jpeg)
+# AmaInsight project
+AmaInsight project is an application which primarily focused on a Node/Express API that serves a landing page of a Resort Website in order to track user activities using Google Analytics. The API allows Users to perform the CRUD(Create, Read, Update and Delete) operations on two objects namely Contact and Appartments. All data is persisted in a database using MongoDB.
+
+
+<!--- ![The Wells Resort](./client/Images/readmeImag.jpeg) --->
+<!--- ![Our Activities](./client/Images/readmeImg.jpeg) --->
 
 <div align="center">
-    <img src="client/Images/readmeImag.jpeg" width="400px"</img> 
+    <img src="client/Images/readmeImg.jpeg" width="400px"</img> 
 </div>
-# AmaInsight project
-AmaInsight project is a full application which primarily focused on a Node/Express API that serve a landing page of a Resort Website in order to track user activities using Google Analytics. The API allows Users to perform the CRUD(Create, Read, Update and Delete) operations on two objects namely Contact and Appartments. All data is persisted in a database using MongoDB. 
+
+
+
 
 ## Running the app
 To run locally, run npm install, then ```node index``` you can install nodemon after installing the depencies for easy running of the application.
