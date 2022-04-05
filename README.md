@@ -1,5 +1,5 @@
 # AmaInsight project
-AmaInsight project is an application which primarily focused on a Node/Express API that serves a landing page of a Resort Website in order to track user activities using Google Analytics. The API allows Users to perform the CRUD(Create, Read, Update and Delete) operations on two objects namely Contact and Appartments. All data is persisted in a database using MongoDB.
+AmaInsight project is an application which primarily focused on a Node/Express API that serves a landing page of a Resort Website in order to track user activities using Google Analytics. The API allows Users to perform the CRUD(Create, Read, Update and Delete) operations on two objects namely Contacts and Appartments. All data is persisted in a database using MongoDB.
 
 
 <!--- ![The Wells Resort](./client/Images/readmeImag.jpeg) --->
