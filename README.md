@@ -1,8 +1,8 @@
 # AmaInsight project
-AmaInsight project is a Simple Node/Express API to serve a landing page of a Resort Website in order to track user activities using Google Analytics. The API allows Users to create, read, update, and delete Contact as well as Appartments for each individual. All data is persisted in a database using MongoDBB. 
+AmaInsight project is a full application which primarily focused on a Node/Express API that serve a landing page of a Resort Website in order to track user activities using Google Analytics. The API allows Users to perform the CRUD(Create, Read, Update and Delete) operations on two objects namely Contact and Appartments. All data is persisted in a database using MongoDB. 
 
 ## Running the app
-To run locally, run npm install, then ```node index```
+To run locally, run npm install, then ```node index``` you can install nodemon after installing the depencies for easy running of the application.
 
 Once the app is running locally, you can access the API at http://localhost:3000/
 
@@ -14,8 +14,7 @@ To run the test, run ```npm run test```
 ## Testing with Swagger
 Swagger documentation and testing available at http://localhost:3000/api/v1/api-docs
 
-To test with Swagger:
-
+### These are the endpoints
 ### Contact:
 ----
 -Retrieve contacts using GET /api/v1/contacts
