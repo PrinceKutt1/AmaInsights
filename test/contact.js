@@ -110,7 +110,9 @@ describe('/PUT/:id contact', () => {
               .end((err, res) => {
                     res.should.have.status(200);
                     res.body.should.be.a('object');
+                    res.body.should.have.property('email');
                     res.body.should.have.property('message').eql('Contact  updated!');
+                    res.body.should.have.property('_id').eql(contact.id);
                 done();
               });
         });
@@ -130,8 +132,8 @@ describe('/DELETE/:id contact', () => {
                     res.should.have.status(200);
                     res.body.should.be.a('object');
                     res.body.should.have.property('message').eql('Contact successfully deleted!');
-                    res.body.result.should.have.property('ok').eql(1);
-                    res.body.result.should.have.property('n').eql(1);
+                    
+                    
                 done();
               });
         });
