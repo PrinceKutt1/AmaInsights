@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Appartment = require('../models/appartment');
+const Appartment = require('../controller/appartment');
 process.env.NODE_ENV = 'MONGO_URI';
 //Require the dev-dependencies
 const chai = require('chai');
