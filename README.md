@@ -53,3 +53,14 @@ Swagger documentation and testing available at http://localhost:3000/api/v1/api-
 
 
 [The project is deployed on Heroku. Click on link for live project](https://amainsight.herokuapp.com/)
+
+----
+
+### Resources
+- NodeJs
+- ExpressJS
+- MongoDB
+- JQuery
+- Swagger for documenting API
+- Google Tag Manager for tracking user activities
+- Mocha and Chaii for testing
